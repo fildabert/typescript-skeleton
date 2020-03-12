@@ -1,6 +1,6 @@
 
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('billing_type', {
+  up: (queryInterface: any, Sequelize: any) => queryInterface.createTable('billing_type', {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -29,5 +29,5 @@ module.exports = {
       allowNull: false,
     },
   }),
-  down: queryInterface => queryInterface.dropTable('billing_type'),
+  down: (queryInterface: any) => queryInterface.dropTable('billing_type'),
 };

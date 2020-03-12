@@ -1,6 +1,6 @@
+import BoostLogger from 'boost-module-logger';
 import config from '../config';
 
-const BoostLogger = require('boost-module-logger');
 
 const hostService = config.get('SERVICE_LOGGER'); // service logger endpoint
 const service = config.get('SERVICE');

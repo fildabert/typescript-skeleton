@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import express, {
   Request, Response, NextFunction, Errback,
 } from 'express';
@@ -18,7 +19,7 @@ app.use(expressValidator());
 console.log(config.get('hello'));
 
 
-app.use((req, res, next) => {
+app.use((req: Request, res: Response, next: NextFunction) => {
   req.requestId = cuid();
   next();
 });

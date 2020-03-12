@@ -1,10 +1,8 @@
+import winston from 'winston';
+import fs from 'fs';
 import config from '../config';
-
-export {};
-const winston = require('winston');
-require('winston-daily-rotate-file');
-const fs = require('fs');
-const { boostLogger } = require('./boost-logger');
+import { boostLogger } from './boost-logger';
+import 'winston-daily-rotate-file';
 
 const logDir = `${config.get('LOG_DIR')}/`;
 
@@ -34,4 +32,4 @@ const logger = {
   },
 };
 
-module.exports = logger;
+export default logger;
